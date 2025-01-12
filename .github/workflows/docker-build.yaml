@@ -24,4 +24,4 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: ${{ github.event_name != 'pull_request' }}
-          tags: kezhang/docker-ci-automation:latest,kezhang/docker-ci-automation:01
+          tags: kezizi/docker-ci-automation:latest,kezizi/docker-ci-automation:01
