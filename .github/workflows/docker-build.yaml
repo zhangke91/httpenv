@@ -43,6 +43,10 @@ jobs:
           cache-to: type=gha,mode=max
           platforms: linux/amd64
 
+      - name: Unit Testing in Docker
+        run: |
+          docker run --rm ${{ github.run_id }} echo "run test commands here"
+
 #NEW: (START) ##########################################################
       - name: Run Trivy for all CVEs (non-blocking)
         uses: aquasecurity/trivy-action@master
