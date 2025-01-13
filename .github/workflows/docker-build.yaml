@@ -67,7 +67,7 @@ jobs:
           export TESTING_IMAGE=ghcr.io/bretfisher/docker-ci-automation:"$GITHUB_RUN_ID"
           envsubst < manifests/deployment.yml  | kubectl apply -f -
           kubectl rollout status deployment myapp
-          kubectl exec deploy/myapp -- curl --fail localhost
+          kubectl exec deploy/myapp -- curl --fail localhost:8888
 
       - name: Build and export to Docker
         uses: docker/build-push-action@v6
