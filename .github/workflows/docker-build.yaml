@@ -29,7 +29,7 @@ jobs:
         id: docker_meta
         uses: docker/metadata-action@v5
         with:
-          images: bretfisher/docker-ci-automation
+          images: kezizi/docker-ci-automation
           flavor: |
             latest=false
           tags: |
